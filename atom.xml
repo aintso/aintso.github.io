@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aintso.github.io</id>
     <title>aintso</title>
-    <updated>2021-01-06T10:27:57.234Z</updated>
+    <updated>2021-01-06T12:18:38.848Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aintso.github.io"/>
     <link rel="self" href="https://aintso.github.io/atom.xml"/>
@@ -120,6 +120,10 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 </code></pre>
+<p><code>class CEIM02App : public CWinAppEx</code> 类<code>CEIM02App</code> 从<code>CWinAppEx</code> 公有继承。</p>
+<blockquote>
+<p><code>CWinAppEx</code> 处理应用程序状态，将状态保存到注册表，从注册表加载状态，初始化应用程序管理器，并提供指向相同应用程序管理器的链接。<a href="https://docs.microsoft.com/zh-cn/cpp/mfc/reference/cwinappex-class?view=msvc-160">CWinAppEx 类</a></p>
+</blockquote>
 </blockquote>
 ]]></content>
     </entry>
