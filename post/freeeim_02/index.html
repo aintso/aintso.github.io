@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>aintso</title>
 <meta name="description" content="涓流积至沧溟水" />
-<link rel="shortcut icon" href="https://aintso.github.io/favicon.ico?v=1609914442367">
+<link rel="shortcut icon" href="https://aintso.github.io/favicon.ico?v=1609928872325">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -23,7 +23,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://aintso.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://aintso.github.io/images/avatar.png?v=1609914442367" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://aintso.github.io/images/avatar.png?v=1609928872325" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">aintso</h1>
       </div>
@@ -88,7 +88,7 @@
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
         <h1 class="text-3xl font-bold lg:mt-16">FreeEIM_02</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2021-01-06 / 4 min read
+          2021-01-06 / 5 min read
         </div>
         
           <img class="post-feature-image rounded-lg mx-auto my-4" src="https://aintso.github.io/post-images/freeeim_02.PNG" alt="">
@@ -164,6 +164,39 @@
 <pre><code class="language-c++">#ifndef __AFXWIN_H__
 	#error include 'stdafx.h' before including this file for PCH
 #endif
+</code></pre>
+<p><strong>#ifndef</strong> 是&quot;if not defined&quot;的简写**，是<a href="https://baike.baidu.com/item/%E5%AE%8F%E5%AE%9A%E4%B9%89/8711494">宏定义</a>的一种，它是可以根据是否已经定义了一个变量来进行分支选择，一般用于调试等。实际上确切的说这应该是预处理功能中三种（<a href="https://baike.baidu.com/item/%E5%AE%8F%E5%AE%9A%E4%B9%89/8711494">宏定义</a>，文件包含和<a href="https://baike.baidu.com/item/%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91/7692959">条件编译</a>）中的第三种——<a href="https://baike.baidu.com/item/%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91/7692959">条件编译</a>。</p>
+<p><code>__AFXWIN_H__</code>由MFC头文件定义。<code>#ifndef __AFXWIN_H__</code> ，表示如果<code>__AFXWIN_H__</code>未定义（即MFC头文件未编译），则 <code>#error include 'stdafx.h' before including this file for PCH</code> 。</p>
+<blockquote>
+<p><strong>#error</strong> 命令是C/C++语言的预处理命令之一，当预处理器预处理到#error命令时将停止编译并输出用户自定义的错误消息。</p>
+</blockquote>
+<hr>
+<pre><code class="language-c++">#include &quot;thirdpartclass/WinAppEx.h&quot;
+#include &quot;resource.h&quot;		// main symbols
+</code></pre>
+<p><strong>resource.h</strong> 是**.rc** 文件的头文件，<strong>.rc</strong> 文件里的常量全在resource.h定义。</p>
+<hr>
+<pre><code class="language-c++">class CEIM02App : public CWinAppEx
+{
+public:
+	CEIM02App();
+
+	static LONG __stdcall EM_UnhandledExceptionFilter(LPEXCEPTION_POINTERS ExceptionInfo);
+// Overrides
+	// ClassWizard generated virtual function overrides
+	//{{AFX_VIRTUAL(CEIM02App)
+	public:
+	virtual BOOL InitInstance();
+	//}}AFX_VIRTUAL
+
+// Implementation
+
+	//{{AFX_MSG(CEIM02App)
+		// NOTE - the ClassWizard will add and remove member functions here.
+		//    DO NOT EDIT what you see in these blocks of generated code !
+	//}}AFX_MSG
+	DECLARE_MESSAGE_MAP()
+};
 </code></pre>
 </blockquote>
 
