@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aintso.github.io</id>
     <title>aintso</title>
-    <updated>2021-01-06T02:52:05.639Z</updated>
+    <updated>2021-01-06T06:23:11.495Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aintso.github.io"/>
     <link rel="self" href="https://aintso.github.io/atom.xml"/>
@@ -10,6 +10,86 @@
     <logo>https://aintso.github.io/images/avatar.png</logo>
     <icon>https://aintso.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, aintso</rights>
+    <entry>
+        <title type="html"><![CDATA[FreeEIM_02]]></title>
+        <id>https://aintso.github.io/post/freeeim_02/</id>
+        <link href="https://aintso.github.io/post/freeeim_02/">
+        </link>
+        <updated>2021-01-06T05:32:21.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="eim02cpp">EIM02.cpp</h1>
+<p>在该项目的 <strong>ReadMe.txt</strong> 中对 <strong>EIM02.cpp</strong> 的描述为 <em>This is the main application source file that contains the application class CEIM02App</em> 。</p>
+<h2 id="stdafxh">stdafx.h</h2>
+<pre><code class="language-c++">#include &quot;stdafx.h&quot;
+</code></pre>
+<p><em>stdafx.h在C++中起到的作用是头文件预编译，即把C++工程中使用的MFC头文件预先编译，以后该工程编译时，直接使用预编译的结果，以加快编译速度。C++编译器通过一个头文件stdafx.h来使用预编译头文件。stdafx.h并不是标准C++头文件，与项目的源代码文件存放在同一个文件文件夹下，通过#include&quot;stdafx.h&quot;引用。stdafx的英文全称为：Standard Application Framework Extensions（标准应用程序框架的扩展）。</em></p>
+<p>stdafx.h中没有函数库，只是定义了一些环境参数，使得编译出来的<a href="https://baike.baidu.com/item/%E7%A8%8B%E5%BA%8F/71525">程序</a>能在32位的操作系统环境下运行。</p>
+<p>Windows和MFC的include文件都非常大，即使有一个快速的处理程序，<a href="https://baike.baidu.com/item/%E7%BC%96%E8%AF%91%E7%A8%8B%E5%BA%8F">编译程序</a>也要花费相当长的时间来完成工作。由于每个.CPP文件都包含相同的include文件，为每个.CPP文件都重复处理这些文件就显得很傻了。</p>
+<p>为避免这种浪费，AppWizard和VisualC++编译程序一起进行工作，如下所示：</p>
+<ul>
+<li>
+<p>AppWizard建立了文件stdafx.h，该文件包含了所有当前工程文件需要的MFCinclude文件。且这一文件可以随被选择的选项而变化。</p>
+</li>
+<li>
+<p>AppWizard然后就建立Stdafx.cpp。这个文件通常都是一样的。</p>
+</li>
+<li>
+<p>然后AppWizard就建立起工程文件，这样第一个被编译的文件就是stdafx.cpp。</p>
+</li>
+<li>
+<p>当<a href="https://baike.baidu.com/item/VisualC%2B%2B/393951">VisualC++</a>编译stdafx.cpp文件时，它将结果保存在一个名为stdafx.pch的文件里。(扩展名pch表示<a href="https://baike.baidu.com/item/%E9%A2%84%E7%BC%96%E8%AF%91">预编译</a>头文件。)</p>
+</li>
+<li>
+<p>当VisualC++编译随后的每个.cpp文件时，它阅读并使用它刚生成的.pch文件。VisualC++不再分析Windowsinclude文件，除非你又编辑了stdafx.cpp或stdafx.h。</p>
+</li>
+</ul>
+<p>在这个过程中你必须遵守以下规则：</p>
+<ul>
+<li>
+<p>你编写的任何.cpp文件都必须首先包含stdafx.h。</p>
+</li>
+<li>
+<p>如果你有工程文件里的大多数.cpp文件需要.h文件，顺便将它们加在stdafx.h(后部)上，然后预编译stdafx.cpp。</p>
+</li>
+<li>
+<p>由于.pch文件具有大量的符号信息，它是你的工程文件里最大的文件。</p>
+</li>
+</ul>
+<p>如果你的磁盘空间有限，你就希望能将这个你从没使用过的工程文件中的.pch文件删除。执行程序时并不需要它们，且随着工程文件的重新建立，它们也自动地重新建立。</p>
+<hr>
+<h2 id="eim02h">EIM02.h</h2>
+<pre><code class="language-c++">#include &quot;EIM02.h&quot;
+</code></pre>
+<blockquote>
+<p>EIM02.h</p>
+<hr>
+<pre><code class="language-c++">#if !defined(AFX_EIM02_H__E3B24EBA_BA0F_4562_8D5A_D3C3CF085C33__INCLUDED_)
+#define AFX_EIM02_H__E3B24EBA_BA0F_4562_8D5A_D3C3CF085C33__INCLUDED_
+</code></pre>
+<p>防止重复编译。</p>
+<blockquote>
+<p>这是vc6及更低版本的防止同个头文件，被重复include之后，被重复编译的一贯做法。</p>
+<p>在vs2003及更高版本，可以用 <strong>#pragma once</strong> 来替代类似的功能。</p>
+</blockquote>
+<hr>
+<pre><code class="language-c++">#if _MSC_VER &gt; 1000
+#pragma once
+#endif // _MSC_VER &gt; 1000
+</code></pre>
+<p>微软的预编译控制。</p>
+<p>_MSC_VER分解如下：<br>
+<em>MS：Microsoft（微软）的简写</em><br>
+<em>C：MSC就是Microsoft出的C编译器。</em><br>
+<em>VER：Version（版本）的简写。</em></p>
+<p><strong>#pragma once</strong> 指示这个文件在编译时只被编译器包括一次！一般用到 .h中防止文件被重复包括！</p>
+<p>该段表示：如果vc编译器的版本大于1000则这个语句被编译。</p>
+<hr>
+<pre><code class="language-c++">#ifndef __AFXWIN_H__
+	#error include 'stdafx.h' before including this file for PCH
+#endif
+</code></pre>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[FreeEIM_01]]></title>
         <id>https://aintso.github.io/post/freeeim_01/</id>
