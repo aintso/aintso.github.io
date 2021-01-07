@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://aintso.github.io</id>
     <title>aintso</title>
-    <updated>2021-01-07T12:20:44.888Z</updated>
+    <updated>2021-01-07T12:38:06.380Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://aintso.github.io"/>
     <link rel="self" href="https://aintso.github.io/atom.xml"/>
@@ -11,15 +11,25 @@
     <icon>https://aintso.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, aintso</rights>
     <entry>
-        <title type="html"><![CDATA[2021/01/07 成都 雪]]></title>
-        <id>https://aintso.github.io/post/20210107-cheng-du-xue/</id>
-        <link href="https://aintso.github.io/post/20210107-cheng-du-xue/">
+        <title type="html"><![CDATA[今日雪]]></title>
+        <id>https://aintso.github.io/post/jin-ri-xue/</id>
+        <link href="https://aintso.github.io/post/jin-ri-xue/">
         </link>
-        <updated>2021-01-07T01:47:05.000Z</updated>
+        <updated>2021-01-07T12:32:53.000Z</updated>
         <content type="html"><![CDATA[<h1 id="雪">雪</h1>
 <p>方师兄今天答辩了。师兄就要毕业咯。</p>
 <p>雪下了一天，地上也没有积雪。</p>
 <p>不由得回顾一下我湖的雪景。</p>
+<figure data-type="image" tabindex="1"><img src="https://aintso.github.io/post-images/1610022960699.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://aintso.github.io/post-images/1610022966928.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://aintso.github.io/post-images/1610022976415.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://aintso.github.io/post-images/1610022987073.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://aintso.github.io/post-images/1610022993383.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://aintso.github.io/post-images/1610023001337.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://aintso.github.io/post-images/1610023013210.jpg" alt="" loading="lazy"></figure>
+<p>想当初下雪还挺冷的，我艰难地在床上进行着朋友圈赏雪。</p>
+<p>回头看看朋友圈有没有今天成都下雪的美图也一并收了。</p>
+<p>看着长沙和成都的雪就不由得想起家里下雪。一想到家里下雪，就想起来小时候，是初中还是小学？大概率是初中的时候，和朋友在公园玩到很晚，大概十一点钟左右吧，已经很晚了，公园里都没人了。看着草坪上一个个的雪人，我很耐心的把雪人一个个都踹到才心满意足地回去。唉，罪过罪过。</p>
 ]]></content>
     </entry>
     <entry>
